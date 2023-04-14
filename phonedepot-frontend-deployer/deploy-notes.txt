@@ -1,0 +1,16 @@
+Manual deployment
+=================
+1. check out code from GIT repository
+
+2. Install dependencies
+npm install
+
+3. Run build
+npm run build
+
+4. If build is success, rsync to AWS S3
+aws s3 sync ./dist/AmdocsPhoneDepot s3://amdocs-phonedepot
+
+CI-CD pipeline
+=============
+It is configured in the github Actions / workflow. As soon as, the code is pushed to the "main" branch, the build is run and deployed to the AWS/

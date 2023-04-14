@@ -1,0 +1,1 @@
+helm install kafka bitnami/kafka -n kafka
